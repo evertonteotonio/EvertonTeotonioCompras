@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductViewController: UIViewController {
+class ProductViewControllerOld: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
