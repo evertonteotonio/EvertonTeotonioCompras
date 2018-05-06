@@ -73,7 +73,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" textLabel="2H7-Cb-wwu" detailTextLabel="OTH-bI-zrL" style="IBUITableViewCellStyleValue1" id="8ov-Qn-ino" customClass="StateTableViewCell" customModule="EvertonTeotonio" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stateCell" textLabel="2H7-Cb-wwu" detailTextLabel="OTH-bI-zrL" style="IBUITableViewCellStyleValue1" id="8ov-Qn-ino" customClass="StateTableViewCell" customModule="EvertonTeotonio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ov-Qn-ino" id="sIK-Ul-UCL">
@@ -142,19 +142,69 @@
         <!--Lista de compras-->
         <scene sceneID="dlv-9s-tUo">
             <objects>
-                <tableViewController id="3cg-T8-fX7" customClass="ShoppingTableViewController" customModule="EvertonTeotonio" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3cg-T8-fX7" customClass="ProductTableViewController" customModule="EvertonTeotonio" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tzf-1U-n6Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qJX-m7-kG9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="118" id="qJX-m7-kG9" userLabel="ProductCell" customClass="ProductTableViewCell" customModule="EvertonTeotonio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qJX-m7-kG9" id="oh5-IO-DdD">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="117.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fAR-ys-nff">
+                                            <rect key="frame" x="16" y="16" width="97" height="85"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-nS-on7">
+                                            <rect key="frame" x="130" y="16" width="30" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhw-4s-c2A">
+                                            <rect key="frame" x="130" y="39" width="30" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOd-xU-vtD">
+                                            <rect key="frame" x="130" y="58.5" width="35" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5Q-nv-62z">
+                                            <rect key="frame" x="130" y="86.5" width="34" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="fAR-ys-nff" secondAttribute="bottom" constant="16.5" id="9Yc-09-xt0"/>
+                                        <constraint firstItem="Dhw-4s-c2A" firstAttribute="leading" secondItem="gTC-nS-on7" secondAttribute="leading" id="Cso-hh-xc3"/>
+                                        <constraint firstItem="fAR-ys-nff" firstAttribute="top" secondItem="oh5-IO-DdD" secondAttribute="top" constant="16" id="DY1-th-Qca"/>
+                                        <constraint firstItem="gTC-nS-on7" firstAttribute="leading" secondItem="fAR-ys-nff" secondAttribute="trailing" constant="17" id="TJe-th-lOY"/>
+                                        <constraint firstItem="cOd-xU-vtD" firstAttribute="top" secondItem="Dhw-4s-c2A" secondAttribute="bottom" constant="5" id="Vfe-xK-WRn"/>
+                                        <constraint firstAttribute="trailing" secondItem="fAR-ys-nff" secondAttribute="trailing" constant="262" id="ZVR-9m-zLl"/>
+                                        <constraint firstItem="gTC-nS-on7" firstAttribute="top" secondItem="fAR-ys-nff" secondAttribute="top" id="eUE-Lq-v3q"/>
+                                        <constraint firstItem="Dhw-4s-c2A" firstAttribute="top" secondItem="gTC-nS-on7" secondAttribute="bottom" constant="5" id="lq1-vz-N7l"/>
+                                        <constraint firstItem="fAR-ys-nff" firstAttribute="leading" secondItem="oh5-IO-DdD" secondAttribute="leading" constant="16" id="nbc-fB-ELh"/>
+                                        <constraint firstItem="q5Q-nv-62z" firstAttribute="leading" secondItem="cOd-xU-vtD" secondAttribute="leading" id="pPI-gk-B5x"/>
+                                        <constraint firstItem="q5Q-nv-62z" firstAttribute="bottom" secondItem="fAR-ys-nff" secondAttribute="bottom" id="rMo-0x-mQF"/>
+                                        <constraint firstItem="cOd-xU-vtD" firstAttribute="leading" secondItem="Dhw-4s-c2A" secondAttribute="leading" id="wNU-Ys-KlG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ivPhoto" destination="fAR-ys-nff" id="Whg-a9-gYh"/>
+                                    <outlet property="lbCard" destination="q5Q-nv-62z" id="P0h-8S-fXf"/>
+                                    <outlet property="lbPrice" destination="cOd-xU-vtD" id="Byb-p3-pW4"/>
+                                    <outlet property="lbState" destination="Dhw-4s-c2A" id="r7D-E5-vx5"/>
+                                    <outlet property="lbTitle" destination="gTC-nS-on7" id="dMB-cO-7qc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -172,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEv-R6-nWy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2174" y="-340"/>
+            <point key="canvasLocation" x="2173.5999999999999" y="-340.47976011994007"/>
         </scene>
         <!--Product Register View Controller-->
         <scene sceneID="SQj-yK-uBX">
