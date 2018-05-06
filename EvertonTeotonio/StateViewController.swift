@@ -206,4 +206,11 @@ extension StateViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tfDolar.text = String(format : "%.2f" ,UserDefaults.standard.double(forKey: "dolar"))
+        tfIOF.text = String(format: "%.2f", UserDefaults.standard.double(forKey: "iof"))
+    }
 }
