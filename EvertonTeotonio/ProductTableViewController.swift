@@ -59,10 +59,17 @@ class ProductTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductTableViewCell
         let product = fetchedResultController.object(at: indexPath)
         
-        cell.lbPrice.text = "\(product.price)"
-        cell.lbTitle.text = product.name
-        cell.lbCard.text = product.creditcard ? "Com Cartão" : "Sem Cartão"
-        cell.lbState.text = product.state?.name
+        cell.lbPrice.text = "Valor: \(product.price)"
+        cell.lbTitle.text = "Produto: \(product.name!)"
+        cell.lbCard.text = product.creditcard ? "Compra com cartão: Sim" : "Compra com cartão: Não"
+        
+        if let state = product.state?.name {
+           cell.lbState.text = "Estado: \(state)"
+        } else {
+            cell.lbState.text = "Estado:"
+        }
+        
+        
         if let image = product.photo as? UIImage {
             cell.ivPhoto.image = image
         } else {

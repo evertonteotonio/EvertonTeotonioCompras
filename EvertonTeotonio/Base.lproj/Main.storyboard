@@ -157,6 +157,9 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fAR-ys-nff">
                                             <rect key="frame" x="16" y="16" width="97" height="85"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="NdI-gP-cHm"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-nS-on7">
                                             <rect key="frame" x="130" y="16" width="30" height="18"/>
