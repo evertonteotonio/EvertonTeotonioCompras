@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C479BFD209E13B600AEC097 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C479BFC209E13B600AEC097 /* ShoppingViewController.swift */; };
+		6C6205CC209F9147002B2ABB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6C6205CB209F9147002B2ABB /* Settings.bundle */; };
 		6CA3A4EE209A7DB70048D25C /* ShoppingData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CA3A4EC209A7DB70048D25C /* ShoppingData.xcdatamodeld */; };
 		6CCD6303209DE6AD009722E5 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6302209DE6AD009722E5 /* UIViewController+CoreData.swift */; };
 		6CCD6305209DE7BC009722E5 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6304209DE7BC009722E5 /* ProductTableViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		6C479BFC209E13B600AEC097 /* ShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		6C6205CB209F9147002B2ABB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		6CA3A4ED209A7DB70048D25C /* ShoppingData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShoppingData.xcdatamodel; sourceTree = "<group>"; };
 		6CCD6302209DE6AD009722E5 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		6CCD6304209DE7BC009722E5 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		AC333E702091565D0034DB32 = {
 			isa = PBXGroup;
 			children = (
+				6C6205CB209F9147002B2ABB /* Settings.bundle */,
 				AC333E7B2091565D0034DB32 /* EvertonTeotonio */,
 				AC333E7A2091565D0034DB32 /* Products */,
 			);
@@ -182,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6205CC209F9147002B2ABB /* Settings.bundle in Resources */,
 				AC333E872091565D0034DB32 /* LaunchScreen.storyboard in Resources */,
 				AC333E842091565D0034DB32 /* Assets.xcassets in Resources */,
 				AC333E822091565D0034DB32 /* Main.storyboard in Resources */,
