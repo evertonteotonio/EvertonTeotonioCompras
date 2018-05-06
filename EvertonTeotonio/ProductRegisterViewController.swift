@@ -65,19 +65,22 @@ class ProductRegisterViewController: UIViewController {
         
     }
     
-    //O método cancel irá esconder o teclado e não irá atribuir a seleção ao textField
     @objc func cancel() {
-        //O método resignFirstResponder() faz com que o campo deixe de ter o foco, fazendo assim
-
         tfState.resignFirstResponder()
     }
     
-    //O método done irá atribuir ao textField a escolhe feita no pickerView
     @objc func done() {
         
-        //Abaixo, recuperamos a linha selecionada na coluna
-        currentState = fetchedResultController.object(at: IndexPath(row: pickerView.selectedRow(inComponent: 0), section: 0))
-        tfState.text = currentState.name
+            if let count = fetchedResultController.fetchedObjects?.count {
+
+                if(count > 0){
+                    currentState = fetchedResultController.object(at: IndexPath(row: pickerView.selectedRow(inComponent: 0), section: 0))
+                    tfState.text = currentState.name
+                    cancel()
+                }
+                
+            }
+
         cancel()
     }
     
@@ -90,7 +93,7 @@ class ProductRegisterViewController: UIViewController {
         fetchedResultController.delegate = self
         do {
             try fetchedResultController.performFetch()
-            //            dataSource = fetchedResultController.fetchedObjects?.map({$0.title!})
+
         } catch {
             print(error.localizedDescription)
         }
